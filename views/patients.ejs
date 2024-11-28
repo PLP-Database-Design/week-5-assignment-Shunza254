@@ -1,0 +1,57 @@
+<style>
+    body {
+        font-family: 'source sans pro', sans-serif;
+        background-color: black;
+        color: lightblue;
+    }
+
+    h1 {
+        background-color: lightblue;
+        color: black;
+        text-align: center;
+        border-radius: 0 10px 0 10px;
+        width: 50%;
+    }
+
+    table {
+        /* border: solid; */
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border-bottom: 1px solid;
+    }
+
+    th {
+        padding: 10px 10;
+    }
+
+    td {
+        padding: 15px;
+        text-align: center;
+    }
+</style>
+<h1>Patient's Record</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Patient Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>Date of Birth</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% results.forEach(row => { %>
+            <tr>
+                <td><%= row.patient_id %></td>
+                <td><%= row.first_name %></td>
+                <td><%= row.last_name %></td>
+                <td><%= row.gender %></td>
+                <td><%= row.date_of_birth %></td>
+            </tr>
+        <% }) %> 
+    </tbody>
+</table>

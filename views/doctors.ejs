@@ -1,0 +1,60 @@
+<style>
+    body {
+        font-family: 'source sans pro', sans-serif;
+        background-color: black;
+        color: lightblue;
+    }
+
+    h1 {
+        background-color: lightblue;
+        color: black;
+        text-align: center;
+        border-radius: 0 10px 0 10px;
+        width: 50%;
+    }
+
+    table {
+        /* border: solid; */
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border-bottom: 1px solid;
+    }
+
+    th {
+        padding: 10px 10;
+    }
+
+    td {
+        padding: 15px;
+        text-align: center;
+    }
+</style>
+
+<h1>Doctor's Records</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Doctors ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Specialization</th>
+            <th>Email Address</th>
+            <th>Phone Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% results.forEach(row => { %>
+            <tr>
+                <td><%= row.provider_id %></td>
+                <td><%= row.first_name %></td>
+                <td><%= row.last_name %></td>
+                <td><%= row.provider_specialty %></td>
+                <td><%= row.email_address %></td>
+                <td><%= row.phone_number %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
