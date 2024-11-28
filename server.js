@@ -69,7 +69,7 @@ app.get('/doctors', (request,response) => {
 
 app.get('/appointments', (request, response) => {
     // Retrieve data from appointments table
-    db.query('SELECT * FROM apppointments', (error, results) => {
+    db.query('SELECT * FROM appointments', (error, results) => {
         if(error) {
             console.log('Error retrieving appointments. ID: ', error.stack);
             return response.status(500).send('Unable to fetch appointments')
